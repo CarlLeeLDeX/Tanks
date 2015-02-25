@@ -19,6 +19,7 @@ Art Details (Up to the artists realy)
         Example: A tank could always just face the direction of movement.
     
 Gameplay Details
+    Camera should be placed above the current player, 3rd person over-the-shoulder, but above the head
     Each turn is to be taken one at a time
     Each player has a "power" bar
     At the start of their turn, players "refuel" a portion of their power bar
@@ -32,7 +33,7 @@ Gameplay Details
             Switch to "normal" mode
         End Turn (Via a button, or when out of power)
     
-    Steps required for shooting
+    Shooting Mode
         Aim (Move the 8-way joystick or WASD) Tank does not move, and aiming is relative to the position of the tank itself
         Shoot:
             This could be done with a power gauge that one can hold to increase firepower (Like drawing an arrow)
