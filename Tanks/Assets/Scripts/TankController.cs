@@ -3,6 +3,9 @@ using System.Collections;
 
 public class TankController : MonoBehaviour {
 
+	public float movementSpeed = 5.0f;
+	//private Vector3 moveDirection = new Vector3(0,0,0);
+
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +13,15 @@ public class TankController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+	}
+
+	void FixedUpdate()
+	{
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+
+		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		rigidbody.velocity = movement * movementSpeed;
 	}
 }
