@@ -1,0 +1,41 @@
+General Design Doc (Always subject to change, and up for debate)
+
+System Specifications
+    Game will run with a 1280x720 resolution
+    No plans on full0screen or windowed mode yet.
+
+Game Details
+    A turn-based 2-player 1v1 tank shooting game.
+        2nd player could be an AI
+    The arena will be on a floating island type thing.
+        Circle arena basically
+    Game ends when one tank is left
+    
+Art Details (Up to the artists realy)
+    Simply 3D Polygonal Geometry. Examples include crude boxes, dodecahedron's as crude spheres, etc etc etc...
+    Skybox (Real sky or not, something that fits the asthetic)
+        Could be also "indoors"
+    Animations are generally not needed, as most objects can simply rotate.
+        Example: A tank could always just face the direction of movement.
+    
+Gameplay Details
+    Camera should be placed above the current player, 3rd person over-the-shoulder, but above the head
+    Each turn is to be taken one at a time
+    Each player has a "power" bar
+    At the start of their turn, players "refuel" a portion of their power bar
+    Players are allowed to:
+        In normal mode:
+            Move (Consumes power)
+            Switch to "shoot" mode
+        In shoot mode:
+            Aim
+            Shoot (Consumes power)
+            Switch to "normal" mode
+        End Turn (Via a button, or when out of power)
+    
+    Shooting Mode
+        Aim (Move the 8-way joystick or WASD) Tank does not move, and aiming is relative to the position of the tank itself
+        Shoot:
+            This could be done with a power gauge that one can hold to increase firepower (Like drawing an arrow)
+                Could be hold and release, or tap once to start bar and tap a 2nd time to stop bar.
+            The projectile will travel towards where the player is aiming, at the given power gauge
