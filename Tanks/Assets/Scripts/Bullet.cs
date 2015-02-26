@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
+	public float speed = 20.0f;
+
 	// Use this for initialization
 	void Start () {
-
+		rigidbody.AddForce (transform.forward * speed);
 		Destroy(gameObject, 5);
 	}
 	
