@@ -3,11 +3,10 @@ using System.Collections;
 
 public class TankController : MonoBehaviour {
 
-	public float movementSpeed = 5.0f;
+	public float movementSpeed = 1.0f;
 	//private Vector3 moveDirection = new Vector3(0,0,0);
 	public Transform barrel;
 	public GameObject bullet;
-	public float bulletSpeed = 20.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -28,9 +27,9 @@ public class TankController : MonoBehaviour {
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		Vector3 movement = new Vector3 (0.0f, 0.0f, moveVertical);
-		rigidbody.velocity = movement * movementSpeed;
+		//rigidbody.velocity = movement * movementSpeed;
 
 		transform.Rotate (Vector3.up * moveHorizontal, Space.Self);
-
+		transform.Translate (movement * movementSpeed);
 	}
 }

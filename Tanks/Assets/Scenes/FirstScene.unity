@@ -159,8 +159,8 @@ GameObject:
   - 33: {fileID: 484156939}
   - 65: {fileID: 484156938}
   - 23: {fileID: 484156937}
-  - 54: {fileID: 484156940}
   - 114: {fileID: 484156941}
+  - 54: {fileID: 484156940}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -226,8 +226,7 @@ MeshFilter:
 --- !u!54 &484156940
 Rigidbody:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: a899a680810e24e4185ab3419f290921,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 484156935}
   serializedVersion: 2
@@ -251,10 +250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d61895bdb514d74f9d851c662d2a37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 1
   barrel: {fileID: 822391417}
   bullet: {fileID: 100000, guid: c1bdebd13acb3004d9a7460e607f50b8, type: 2}
-  bulletSpeed: 20
 --- !u!1 &652064183
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +580,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984845021}
   m_LocalRotation: {x: .1305262, y: 0, z: 0, w: .991444886}
-  m_LocalPosition: {x: 0, y: 9, z: -12}
+  m_LocalPosition: {x: 0, y: 7.5, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
