@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class FollowPlayer : MonoBehaviour {
-
+	
 	public GameObject player;
 	private Vector3 offset;
 	private GameManager gm1;
@@ -13,10 +13,7 @@ public class FollowPlayer : MonoBehaviour {
 	void Start () {
 		//change = false;
 		gm1 = gm.GetComponent<GameManager> ();
-		if (gm1.getPlayerTurn () == 1)
-			player = GameObject.Find ("Player1");
-		else
-			player = GameObject.Find ("Player2");
+
 		offset = player.transform.position - transform.position;
 	}
 

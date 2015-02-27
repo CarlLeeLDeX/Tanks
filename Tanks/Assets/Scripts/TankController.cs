@@ -3,12 +3,14 @@ using System.Collections;
 
 public class TankController : MonoBehaviour {
 
+	public int meter = 100;
 	public int player;
 	public float movementSpeed = 1.0f;
 	public Transform barrel;
 	public GameObject bullet;
 	public GameObject gm;
 	private GameManager gm1;
+	public string key;
 
 	// Use this for initialization
 	void Start () {
@@ -20,13 +22,17 @@ public class TankController : MonoBehaviour {
 
 		if (gm1 != null) {
 			if (gm1.getPlayerTurn () == player) {
-				if (Input.GetKeyDown ("space")) {
+				if (Input.GetKeyDown (key) && meter >= 30) {
 					Instantiate (bullet, barrel.position, barrel.rotation);
-					gm1.changeTurn();
+					meter -= 30;
 				}
 			}
 		}
 
+		if (meter <= 0) {
+			meter = 100;
+			gm1.changeTurn();
+		}
 	}
 
 	void FixedUpdate()

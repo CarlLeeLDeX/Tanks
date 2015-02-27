@@ -292,7 +292,7 @@ GameObject:
   - 54: {fileID: 484156940}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +360,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 665972337}
   m_GameObject: {fileID: 484156935}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -380,11 +380,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d61895bdb514d74f9d851c662d2a37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meter: 100
   player: 1
   movementSpeed: .5
   barrel: {fileID: 822391417}
   bullet: {fileID: 100000, guid: c1bdebd13acb3004d9a7460e607f50b8, type: 2}
   gm: {fileID: 30488245}
+  key: space
 --- !u!1 &549962630
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +402,7 @@ GameObject:
   - 114: {fileID: 549962631}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,11 +419,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d61895bdb514d74f9d851c662d2a37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meter: 100
   player: 2
   movementSpeed: 1
   barrel: {fileID: 1805182564}
   bullet: {fileID: 100000, guid: c1bdebd13acb3004d9a7460e607f50b8, type: 2}
   gm: {fileID: 30488245}
+  key: return
 --- !u!54 &549962632
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -430,7 +434,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 93768129}
   m_GameObject: {fileID: 549962630}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -602,6 +606,26 @@ Prefab:
     - target: {fileID: 114038, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414040, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414040, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514040, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114038, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11414040, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
+      propertyPath: key
+      value: space
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
@@ -906,6 +930,10 @@ Prefab:
     - target: {fileID: 400000, guid: c650836e93434414db73df4faa1a2ae8, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: c650836e93434414db73df4faa1a2ae8, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c650836e93434414db73df4faa1a2ae8, type: 2}

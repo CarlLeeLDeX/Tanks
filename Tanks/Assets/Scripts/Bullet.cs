@@ -15,4 +15,11 @@ public class Bullet : MonoBehaviour {
 	void FixedUpdate () {
 		// Vector3 shotForce = new Vector3();
 	}
+
+	void OnTriggerEnter(Collider collider) {
+		if (collider.gameObject.tag == "Player") {
+			Destroy (collider.gameObject);
+			Destroy (gameObject);
+		}
+	}
 }
