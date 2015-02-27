@@ -291,7 +291,7 @@ GameObject:
   - 114: {fileID: 484156941}
   - 54: {fileID: 484156940}
   m_Layer: 0
-  m_Name: Tank
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,6 +599,10 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 30488245}
+    - target: {fileID: 114038, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
+      propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0609b8e20cff2f4baeed403174836f7, type: 2}
   m_RootGameObject: {fileID: 484156935}
