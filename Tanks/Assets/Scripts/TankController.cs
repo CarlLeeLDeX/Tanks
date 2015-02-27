@@ -22,7 +22,7 @@ public class TankController : MonoBehaviour {
 			if (gm1.getPlayerTurn () == player) {
 				if (Input.GetKeyDown ("space")) {
 					Instantiate (bullet, barrel.position, barrel.rotation);
-					//gm1.setPlayerTurn((player % 2) + 1);
+					gm1.changeTurn();
 				}
 			}
 		}

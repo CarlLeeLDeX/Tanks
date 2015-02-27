@@ -7,9 +7,11 @@ public class FollowPlayer : MonoBehaviour {
 	private Vector3 offset;
 	private GameManager gm1;
 	public GameObject gm;
+	//private bool change;
 
 	// Use this for initialization
 	void Start () {
+		//change = false;
 		gm1 = gm.GetComponent<GameManager> ();
 		if (gm1.getPlayerTurn () == 1)
 			player = GameObject.Find ("Player1");
@@ -18,11 +20,6 @@ public class FollowPlayer : MonoBehaviour {
 		offset = player.transform.position - transform.position;
 	}
 
-	void Update()
-	{
-
-	}
-	
 	// Update is called once per frame
 	void LateUpdate () {
 
