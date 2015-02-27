@@ -22,7 +22,7 @@ public class TankController : MonoBehaviour {
 
 		if (gm1 != null) {
 			if (gm1.getPlayerTurn () == player) {
-				if (Input.GetKeyDown (key) && meter >= 30) {
+				if (Input.GetKeyDown (key)) {
 					Instantiate (bullet, barrel.position, barrel.rotation);
 					meter -= 30;
 				}
