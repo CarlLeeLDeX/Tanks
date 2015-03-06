@@ -421,7 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meter: 100
   player: 2
-  movementSpeed: 1
+  movementSpeed: .5
   barrel: {fileID: 1805182564}
   bullet: {fileID: 100000, guid: c1bdebd13acb3004d9a7460e607f50b8, type: 2}
   gm: {fileID: 30488245}
@@ -717,7 +717,7 @@ Camera:
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: .5
     y: 0
     width: 1
     height: 1
@@ -1095,7 +1095,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: .5
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
