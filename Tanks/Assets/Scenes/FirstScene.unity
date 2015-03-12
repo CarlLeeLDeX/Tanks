@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d61895bdb514d74f9d851c662d2a37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolDown: 100
   meter: 100
   player: 1
   movementSpeed: .5
@@ -414,6 +415,10 @@ Prefab:
       propertyPath: m_Center.y
       value: -.300000012
       objectReference: {fileID: 0}
+    - target: {fileID: 11439470, guid: 3f12d85b36dd322459d8d9a77a7f937f, type: 2}
+      propertyPath: coolDown
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f12d85b36dd322459d8d9a77a7f937f, type: 2}
   m_RootGameObject: {fileID: 484156935}
@@ -477,6 +482,10 @@ Prefab:
     - target: {fileID: 11439470, guid: 3f12d85b36dd322459d8d9a77a7f937f, type: 2}
       propertyPath: key
       value: return
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439470, guid: 3f12d85b36dd322459d8d9a77a7f937f, type: 2}
+      propertyPath: coolDown
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f12d85b36dd322459d8d9a77a7f937f, type: 2}
@@ -760,6 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d61895bdb514d74f9d851c662d2a37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolDown: 100
   meter: 100
   player: 2
   movementSpeed: .5

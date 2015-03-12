@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TankController : MonoBehaviour {
 
+	private int reload;
+	public int coolDown = 100;
 	public int meter = 100;
 	public int player;
 	public float movementSpeed = 1.0f;
@@ -16,11 +18,11 @@ public class TankController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gm1 = gm.GetComponent<GameManager> ();
+		reload = coolDown;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 //		if (gm1 != null) {
 //			if (gm1.getPlayerTurn () == player) {
 //				if (Input.GetKeyDown (key)) {
@@ -34,9 +36,13 @@ public class TankController : MonoBehaviour {
 //			meter = 100;
 //			gm1.changeTurn();
 //		}
-
-		if (Input.GetKeyDown (key)) {
-			Instantiate (bullet, barrel.position, barrel.rotation);
+		if (reload >= coolDown) {
+			if (Input.GetKeyDown (key)) {
+				Instantiate (bullet, barrel.position, barrel.rotation);
+				reload = 0;
+			}
+		} else {
+			reload++;
 		}
 
 	}
@@ -66,73 +72,73 @@ public class TankController : MonoBehaviour {
 
 		if (player == 1) {
 			if (Input.GetKey (KeyCode.W)) {
-				if (isGrounded == true) {
+				//if (isGrounded == true) {
 					Vector3 movement = new Vector3 (0.0f, 0.0f, 1.0f);
 					transform.Translate (movementSpeed * movement);
-				}
-				else{
-					transform.Rotate (Vector3.right * 1.0f, Space.World);
-				}
+				//}
+//				else{
+//					transform.Rotate (Vector3.right * 1.0f, Space.World);
+//				}
 			}
 			if (Input.GetKey (KeyCode.S)) {
-				if (isGrounded == true) {
+//				if (isGrounded == true) {
 					Vector3 movement = new Vector3 (0.0f, 0.0f, -1.0f);
 					transform.Translate (movementSpeed * movement);
-				}
-				else {
-					transform.Rotate (Vector3.right * -1.0f, Space.World);
-				}
+//				}
+//				else {
+//					transform.Rotate (Vector3.right * -1.0f, Space.World);
+//				}
 			}
 			if (Input.GetKey (KeyCode.A)) {
-				if (isGrounded == true) {
+				//if (isGrounded == true) {
 					transform.Rotate (Vector3.up * -1.0f, Space.World);
-				}
-				else {
-					transform.Rotate (Vector3.up * -1.0f, Space.World);
-				}
+//				}
+//				else {
+//					transform.Rotate (Vector3.up * -1.0f, Space.World);
+//				}
 			}
 			if (Input.GetKey (KeyCode.D)) {
-				if (isGrounded == true) {
+				//if (isGrounded == true) {
 					transform.Rotate (Vector3.up * 1.0f, Space.World);
-				}
-				else {
-					transform.Rotate (Vector3.up * 1.0f, Space.World);
-				}
+//				}
+//				else {
+//					transform.Rotate (Vector3.up * 1.0f, Space.World);
+//				}
 			}
 		} else {
 			if (Input.GetKey ("up")) {
-				if (isGrounded == true) {
+				//if (isGrounded == true) {
 					Vector3 movement = new Vector3 (0.0f, 0.0f, 1.0f);
 					transform.Translate (movementSpeed * movement);
-				}
-				else{
-					transform.Rotate (Vector3.right * 1.0f, Space.World);
-				}
+//				}
+//				else{
+//					transform.Rotate (Vector3.right * 1.0f, Space.World);
+//				}
 			}
 			if (Input.GetKey ("down")) {
-				if (isGrounded == true) {
+//				if (isGrounded == true) {
 					Vector3 movement = new Vector3 (0.0f, 0.0f, -1.0f);
 					transform.Translate (movementSpeed * movement);
-				}
-				else {
-					transform.Rotate (Vector3.right * -1.0f, Space.World);
-				}
+//				}
+//				else {
+//					transform.Rotate (Vector3.right * -1.0f, Space.World);
+//				}
 			}
 			if (Input.GetKey ("left")) {
-				if (isGrounded == true) {
+//				if (isGrounded == true) {
 					transform.Rotate (Vector3.up * -1.0f, Space.World);
-				}
-				else {
-					transform.Rotate (Vector3.up * -1.0f, Space.World);
-				}
+//				}
+//				else {
+//					transform.Rotate (Vector3.up * -1.0f, Space.World);
+//				}
 			}
 			if (Input.GetKey ("right")) {
-				if (isGrounded == true) {
+//				if (isGrounded == true) {
 					transform.Rotate (Vector3.up * 1.0f, Space.World);
-				}
-				else {
-					transform.Rotate (Vector3.up * 1.0f, Space.World);
-				}
+				//}
+//				else {
+//					transform.Rotate (Vector3.up * 1.0f, Space.World);
+//				}
 			}
 		}
 
