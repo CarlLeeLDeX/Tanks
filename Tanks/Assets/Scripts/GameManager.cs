@@ -4,9 +4,11 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	private int player;
-	private bool change;
+	private int win = 0;
 	public Camera cam1;
 	public Camera cam2;
+	public GameObject player1;
+	public GameObject player2;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +30,22 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		float y1 = player1.transform.position.y;
+		float y2 = player2.transform.position.y;
+
+		if (y1 < -5) {
+			//cam1.enabled = false;
+			win = 2;
+		} else if (y2 < -5) {
+			//cam2.enabled = false;
+			win = 1;
+		}
+
+	}
+
+	public int getWinner()
+	{
+		return win;
 	}
 
 	public int getPlayerTurn()
@@ -46,10 +63,7 @@ public class GameManager : MonoBehaviour {
 //			player = 1;
 //		Debug.Log (player);
 	}
-
-	public bool getChange() {
-		return change;
-	}
+	
 
 
 }
